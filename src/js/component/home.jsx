@@ -1,25 +1,21 @@
 import React, { useState } from "react";
+import LandingPage from "./landingpage"; // Import LandingPage
+import LoginPage from "./loginpage"; // Import LoginPage
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
 
-	const [view, setView] = useState("landingPage")
-
-
-
+	const [view, setView] = useState("landingPage");
 
 	return (
-
-
-
-		<div className="landing-page">
-			<div className="landing-message">Welcome</div>
-			<div className="enter-button"><button>Enter</button></div>
+		<div>
+			{view === "landingPage" ? (
+				<LandingPage setView={setView} /> // Pass setView as a prop
+			) : 
+		
+			(
+				<LoginPage />
+			)}
 		</div>
-
 	);
 };
 
