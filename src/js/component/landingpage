@@ -4,13 +4,9 @@ import React, { useState } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
+const landingpage = () => {
 
-	const [view, setView] = useState("landingPage")
-
-
-
-
+	
 	return (
 
 
