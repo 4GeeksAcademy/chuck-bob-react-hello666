@@ -2,7 +2,7 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 // Create the LoginPage component
-const LoginPage = () => {
+const LoginPage = ({ setView }) => { // Accept setView as a prop
 	return (
 		<div className="welcome-page">
 			<div className="welcome-message">
@@ -15,7 +15,7 @@ const LoginPage = () => {
 				<label>Password:</label> <input type="password" />
 			</div>
 			<div className="login-button">
-				<button>Login</button>
+				<button onClick={() => setView("accountView")}>Login</button>
 			</div>
 		</div>
 	);
