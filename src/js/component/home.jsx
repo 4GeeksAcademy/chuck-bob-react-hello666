@@ -5,15 +5,16 @@ import AccountPage from "./accountpage"; // Import AccountView
 
 const Home = () => {
 	const [view, setView] = useState("landingPage");
+	const [username, setUsername] = useState("");
 
 	return (
 		<div>
 			{view === "landingPage" ? (
 				<LandingPage setView={setView} />
 			) : view === "loginPage" ? (
-				<LoginPage setView={setView} />
+				<LoginPage setView={setView} setUsername={setUsername} />
 			) : view === "accountView" ? (
-				<AccountPage setView={setView} />
+				<AccountPage setView={setView} username={username} setUsername={setUsername}/>
 			) : null}
 		</div>
 	);

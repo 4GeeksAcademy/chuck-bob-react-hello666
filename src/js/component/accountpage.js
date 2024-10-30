@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 
-const AccountPage = ( { setView} ) => {
+const AccountPage = ( { setView, username} ) => {
 
 
 	return (
 		
 		<div className="account-balance-page"> 
-			<div className="username-text">Username HERE</div>
-	
+			<div className="username-text">{username}</div>
+
 			<div className="account-balance-box"> 
 
 			<div className="account-balance-increase"><button>Add Money</button></div>
